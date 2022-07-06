@@ -196,9 +196,10 @@ background: linear-gradient(135deg, #8844ee, #b07dfb);
 }
 .atributos li + li {
   border-bottom: 2px solid #B07DFB;
-
-
 }
+
+
+
 /*Anuncios*/ 
 .anuncios {
   grid-area: anuncios;
@@ -225,3 +226,23 @@ background: linear-gradient(135deg, #8844ee, #b07dfb);
   padding: 30px;
 }
 
+@media (max-width: 1200px){
+  .estrutura {
+    grid-template-areas: 
+    "header header header"
+    "sidenav content content"
+    "sidenav anuncios anuncios"
+    "footer footer footer";
+  }
+}
+@media (max-width: 760px){
+  .estrutura {
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "header"
+    "sidenav"
+    "content"
+    "anuncios"
+    "footer";
+  }
+}
